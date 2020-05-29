@@ -1,0 +1,5 @@
+newmtl FlorB
+map_Kd -o 0 0 -s 1 1 flor b.png
+Kd 1 1 1
+d 1
+

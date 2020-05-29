@@ -1,0 +1,5 @@
+newmtl BambuB
+map_Kd -o 0 0 -s 1 1 Bambu B.png
+Kd 1 1 1
+d 1
+

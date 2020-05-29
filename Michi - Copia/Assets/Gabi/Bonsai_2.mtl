@@ -1,0 +1,5 @@
+newmtl BonsaiB
+map_Kd -o 0 0 -s 1 1 bonsai B.png
+Kd 1 1 1
+d 1
+
