@@ -13,16 +13,20 @@ public class CutsceneController : MonoBehaviour
 
     void Start()
     {
+        Cursor.visible = false;
         currentCutscene = 0;
-        /*for (int i = 0; i < cutscenes.Length; i++)
-        {
-            ChangeAlpha(cutscenes[i].gameObject, 0, 0);
-        }*/
         StartCoroutine(NextCutscene(TransitionTime));
     }
 
+    void Update()
+    {
+        if (Input.GetKeyDown(KeyCode.B))
+        {
+            SceneManager.LoadScene("Jogo");
 
-  
+        }
+    }
+
     void ChangeAlpha(GameObject canvasGroupObj, float alphaValue, float duration, bool blockRayCast = true)
     {
         canvasGroupObj.GetComponent<CanvasGroup>().DOFade(alphaValue, duration);
@@ -89,7 +93,7 @@ public class CutsceneController : MonoBehaviour
             {
             }
         }
-        StartCoroutine(ChangeScene("Main Level"));
+        StartCoroutine(ChangeScene("Jogo"));
 
     }
 

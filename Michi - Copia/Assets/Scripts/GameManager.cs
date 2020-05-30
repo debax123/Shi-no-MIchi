@@ -19,6 +19,7 @@ public class GameManager : MonoBehaviour
     public Text fishText;
     public Text soulsText;
 
+
     // Start is called before the first frame update
     void Start()
     {
@@ -59,15 +60,15 @@ public class GameManager : MonoBehaviour
     public void AddFish(int fishToAdd)
     {
         currentFish += fishToAdd;
-        fishText.text = "Fishes Collected:" + currentFish;
+        fishText.text = ":" + currentFish;
     }
     public void AddSoul(int soulToAdd)
     {
         currentSouls += soulToAdd;
-        soulsText.text = "Souls Saved:" + currentSouls;
+        soulsText.text = ":" + currentSouls;
     }
 
-    void Resume()
+    public void Resume()
     {
         CameraController.rotateSpeed = 5;
         pauseMenuUI.SetActive(false);
@@ -75,13 +76,15 @@ public class GameManager : MonoBehaviour
         isPaused = false;
         Cursor.lockState = CursorLockMode.Locked;
     }
-    void Pause()
+
+    public void Pause()
     {
         CameraController.rotateSpeed = 0;
         pauseMenuUI.SetActive(true);
         Time.timeScale = 0f;
         isPaused = true;
         Cursor.lockState = CursorLockMode.None;
+        Cursor.visible = true;
     }
 
 }
